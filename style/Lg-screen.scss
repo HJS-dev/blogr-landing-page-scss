@@ -207,5 +207,21 @@ button {
                 padding: 0 10rem;
             }
         }
+
+        &3{
+            flex-direction: row;
+            .Titel{
+                text-align: start;
+                padding-right: 15rem;
+            }
+        }
+    }
+
+    .footer{
+        flex-direction: row;
+        padding: 2rem;
+        &Logo{
+            width: 15%;
+        }
     }
 }

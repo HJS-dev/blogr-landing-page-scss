@@ -246,4 +246,28 @@ button {
   text-align: start;
   padding: 0 10rem;
 }
+
+.container .section3 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .section3 .Titel {
+  text-align: start;
+  padding-right: 15rem;
+}
+
+.container .footer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 2rem;
+}
+
+.container .footerLogo {
+  width: 15%;
+}
 /*# sourceMappingURL=Lg-screen.css.map */
