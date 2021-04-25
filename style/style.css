@@ -1,0 +1,420 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+html ::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+  border: none;
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.flex-col-center, .container .header .navbar, .container .header .navbar .logo .menu-btn, .container .header .navbar .dropdown, .container .header .navbar .dropdown .navlink, .container .header .navbar .dropdown .navlink__ul, .container .header .navbar .dropdown .navlink .show, .container .header .navbar .dropdown .cta-btn, .container .header .hero, .container .header .hero .titel, .container .section, .container .section2, .container .footer, .container .footer .footerlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-flow: row;
+  width: 100%;
+  position: relative;
+}
+
+.container .header {
+  height: 65vh;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  position: relative;
+  background: -webkit-gradient(linear, right bottom, left top, from(#ff3d54), to(#ff8f70));
+  background: linear-gradient(bottom right, #ff3d54, #ff8f70);
+  z-index: 0;
+  border-bottom-left-radius: 6rem;
+}
+
+.container .header .intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -100;
+  border-bottom-left-radius: 6rem;
+}
+
+.container .header .intro img {
+  width: 375px;
+}
+
+.container .header .navbar {
+  z-index: 1;
+}
+
+.container .header .navbar .logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .header .navbar .logo .close:focus .bar__1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.container .header .navbar .logo .close:focus .bar__2 {
+  display: none;
+}
+
+.container .header .navbar .logo .close:focus .bar__3 {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.container .header .navbar .logo .menu-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.container .header .navbar .logo .menu-btn div {
+  margin-top: 7px;
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.container .header .navbar .hidden {
+  display: none;
+}
+
+.container .header .navbar .dropdown {
+  width: 85%;
+  background-color: white;
+  padding: 2rem 1rem;
+  border-radius: 1.2rem;
+  margin-top: 1rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.637) 1px 11px 20px 4px;
+          box-shadow: rgba(0, 0, 0, 0.637) 1px 11px 20px 4px;
+}
+
+.container .header .navbar .dropdown .navlink {
+  width: 100%;
+  padding: 0.75rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container .header .navbar .dropdown .navlink__btn {
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #304354;
+}
+
+.container .header .navbar .dropdown .navlink__btn i {
+  color: red;
+  margin-left: 7px;
+}
+
+.container .header .navbar .dropdown .navlink__btn .rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container .header .navbar .dropdown .navlink__ul {
+  width: 100%;
+  background-color: #efeff1;
+  display: none;
+}
+
+.container .header .navbar .dropdown .navlink__ul li {
+  padding: 0.5rem;
+}
+
+.container .header .navbar .dropdown .navlink .show {
+  width: 100%;
+  background-color: #efeff1;
+}
+
+.container .header .navbar .dropdown .cta-btn {
+  width: 100%;
+  border-top: 0.5px solid rgba(128, 128, 128, 0.287);
+  margin-top: 0.5rem;
+}
+
+.container .header .navbar .dropdown .cta-btn .btn {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.container .header .navbar .dropdown .cta-btn__login {
+  color: #1f3f5b;
+  margin-top: 0.75rem;
+}
+
+.container .header .navbar .dropdown .cta-btn__signup {
+  background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(left, #ff8f70, #ff3d54);
+  border-radius: 3rem;
+  color: white;
+}
+
+@media screen and (min-width: 780px) {
+  .container .header .navbar .dropdown .cta-btn {
+    border-top: none;
+  }
+}
+
+.container .header .hero {
+  position: absolute;
+  top: 3rem;
+  height: 100%;
+  z-index: -1;
+  text-align: center;
+  color: white;
+  font-family: "Overpass", sans-serif;
+  padding: 0.5rem;
+}
+
+.container .header .hero .titel {
+  height: 60%;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 0rem 0.5rem;
+}
+
+.container .header .hero .titel__h1 {
+  font-size: 1.5rem;
+}
+
+.container .header .hero .titel__p {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.container .header .hero__cta-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  height: 40%;
+  width: 100%;
+}
+
+.container .header .hero__cta-btn .btn {
+  margin: 0 1px;
+  padding: 0.90rem 1.2rem;
+  border: solid 0.5px white;
+  border-radius: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.container .header .hero__cta-btn .start {
+  background-color: white;
+  color: #ff525d;
+}
+
+.container .header .hero__cta-btn .learn {
+  color: white;
+  padding: 0.90rem 1.5rem;
+}
+
+.container .section {
+  width: 100%;
+  padding: 5rem 2rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.container .section div h2 {
+  margin-bottom: 1rem;
+}
+
+.container .section div p {
+  margin-bottom: 2rem;
+}
+
+.container .section1 {
+  background-color: white;
+  color: #4b5862;
+}
+
+.container .section1 h2,
+.container .section1 h3 {
+  color: #1f3f5b;
+  margin-bottom: 0.5rem;
+}
+
+.container .section1 img {
+  width: 100%;
+}
+
+.container .section2 {
+  background-color: #25252d;
+  color: #c8c8cb;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#3f4164), to(#2c2d3f));
+  background-image: linear-gradient(bottom, #3f4164, #2c2d3f);
+  position: relative;
+  border-top-right-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+  padding: 0;
+  margin-top: 5rem;
+  height: 70vh;
+}
+
+.container .section2 h2,
+.container .section2 h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.container .section2Logo {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  overflow-y: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 6rem;
+}
+
+.container .section2-mlogo {
+  width: 90%;
+  margin-bottom: 2rem;
+  margin-top: -15rem;
+  z-index: 100;
+}
+
+.container .section2-mlogo img {
+  width: 95%;
+}
+
+.container .section2Titel {
+  z-index: 10;
+  padding: 2rem;
+}
+
+.container .section2Titel h2 {
+  margin-bottom: 1.5rem;
+}
+
+.container .section3 {
+  background-color: white;
+  color: #4b5862;
+}
+
+.container .section3 h2,
+.container .section3 h3 {
+  color: #1f3f5b;
+  margin-bottom: 0.5rem;
+}
+
+.container .section3Logo {
+  width: 105%;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.container .section3Logo img {
+  width: 100%;
+}
+
+.container .footer {
+  background-color: #25252d;
+  color: #c8c8cb;
+  -ms-flex-pack: distribute !important;
+      justify-content: space-around !important;
+  border-top-right-radius: 4rem;
+}
+
+.container .footer h2,
+.container .footer h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.container .footerLogo {
+  width: 100%;
+  height: 20vh;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.container .footer .mb-4 {
+  margin-bottom: 3rem;
+}
+
+.container .footer .footerlinkHeading {
+  margin: 1.2rem 0;
+  font-weight: 600;
+}
+
+.container .footer .footerlink a {
+  padding-bottom: 0.5rem;
+}
+/*# sourceMappingURL=style.css.map */
