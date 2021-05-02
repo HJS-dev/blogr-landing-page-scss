@@ -4,10 +4,13 @@ let arrow = document.querySelectorAll('i')
 
 
 for (let i = 0; i < navLists.length; i++) {
-    navLists[i].classList.remove('show')
+    // navLists[i].classList.remove('show')
 
     navName[i].addEventListener('click', (e) => {
         
+       
+
+
         
         // e.target.nextElementSibling.classList.toggle("show")
             navLists[i].classList.toggle('show')
